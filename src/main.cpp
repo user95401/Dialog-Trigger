@@ -189,7 +189,8 @@ class $modify(GameObjectDialogTriggerExt, GameObject) {
     virtual gd::string getSaveString(GJBaseGameLayer* p0) {
 		auto str = GameObject::getSaveString(p0);
         if (auto data = typeinfo_cast<CCNode*>(this->getUserObject("DialogTriggerDataNode"_spr))) {
-            str += ",228," + ZipUtils::base64URLEncode(data->getID().c_str());
+            str += ",228,";
+            str += ZipUtils::base64URLEncode(data->getID().c_str()).c_str();
         }
         return str;
     }
