@@ -1,0 +1,24 @@
+{
+	"geode": "4.5.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"early-load": true,
+
+	"id": "user95401.dialog-trigger",
+	"name": "Dialog Trigger",
+	"version": "v1.0.0",
+	"developer": "user95401",
+
+	"description": "The Dialog Trigger mod for Geomety Dash",
+
+	"links": {
+		"community": "https://discord.gg/6SxAbk3bTA",
+		"homepage": "https://t.me/user95401_channel",
+		"source": "https://github.com/user95401/Dialog-Trigger"
+	},
+	"tags": [ "gameplay", "interface", "editor" ]
+}
