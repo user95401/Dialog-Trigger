@@ -75,11 +75,11 @@ class $modify(EffectGameObjectDialogTriggerExt, EffectGameObject) {
 		exchangeMyCheatsToObjectID(this, nullptr, changedObjects);
     }
     virtual void triggerObject(GJBaseGameLayer* p0, int p1, gd::vector<int> const* p2) {
-        log::debug(
+        if (false) log::debug(
             "{}->{}(GJBaseGameLayer* {}, int {}, gd::vector<int> const* {})", 
             this, __func__, p0, p1, p2 ? *p2 : gd::vector<int>()
         );
-        log::debug("{}->m_objectID {}", this, this->m_objectID);
+        if (false) log::debug("{}->m_objectID {}", this, this->m_objectID);
         m_fields->m_game = p0;
         EffectGameObject::triggerObject(p0, p1, p2);
         if (auto DialogTriggerDataNode = typeinfo_cast<CCNode*>(this->getUserObject("DialogTriggerDataNode"_spr))) {
@@ -131,7 +131,7 @@ class $modify(EffectGameObjectDialogTriggerExt, EffectGameObject) {
                 }
             }
 
-            log::debug("placement {}", static_cast<int>(placement));
+            if (false) log::debug("placement {}", static_cast<int>(placement));
             
             auto& dialog = m_fields->m_dialogLayer;
             if (dialog) dialog->removeFromParent();
@@ -168,7 +168,7 @@ class $modify(GameObjectDialogTriggerExt, GameObject) {
     };
     static GameObject* objectFromVector(gd::vector<gd::string>& p0, gd::vector<void*>& p1, GJBaseGameLayer* p2, bool p3) {
 		auto object = GameObject::objectFromVector(p0, p1, p2, p3);
-        log::debug("p0 {}", p0);
+        if (false) log::debug("p0 {}", p0);
         if (object->m_objectID == DIALOG_TRIGGER_ID) {
             auto effectObj = typeinfo_cast<EffectGameObject*>(object);
 
@@ -213,7 +213,7 @@ class $modify(EditorUIDialogTriggerExt, EditorUI) {
         EditorUI::setupCreateMenu();
         //12
         if (auto tab = (EditButtonBar*)(this->m_createButtonBars->objectAtIndex(12))) {
-            log::info("dialog trigger added {}", DIALOG_TRIGGER_ID);
+            if (false) log::info("dialog trigger added {}", DIALOG_TRIGGER_ID);
             tab->m_buttonArray->addObject(this->getCreateBtn(DIALOG_TRIGGER_ID, 4));
             tab->reloadItems(
                 GameManager::get()->getIntGameVariable("0049"),
@@ -295,8 +295,8 @@ class $modify(EditTriggersPopupDialogTriggerExt, EditTriggersPopup) {
             this->m_buttonMenu->addChild(input);
 
             auto editor = CCMenuItemExt::createSpriteExtra(
-                ButtonSprite::create("Dialog Editor"), [input = Ref(input)](CCMenuItem*) {
-                    EditDialogDataPopup::create(input)->show();
+                ButtonSprite::create("String Guide"), [input = Ref(input)](CCMenuItem*) {
+                    if (false) EditDialogDataPopup::create(input)->show();
                     openInfoPopup(getMod());
                 }
             );
