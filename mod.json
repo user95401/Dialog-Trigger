@@ -1,5 +1,5 @@
 {
-	"geode": "4.5.0",
+	"geode": "4.6.3",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
@@ -10,7 +10,7 @@
 
 	"id": "user95401.dialog-trigger",
 	"name": "Dialog Trigger",
-	"version": "v1.0.0-beta.2",
+	"version": "v1.0.0-beta.3",
 	"developer": "user95401",
 
 	"description": "The Dialog Trigger mod for Geomety Dash",
@@ -20,5 +20,14 @@
 		"homepage": "https://t.me/user95401_channel",
 		"source": "https://github.com/user95401/Dialog-Trigger"
 	},
-	"tags": [ "gameplay", "interface", "editor" ]
+	"tags": [ "gameplay", "interface", "editor" ],
+
+	"resources": {
+		"spritesheets": {
+			"GJ_GameSheet02": [ "assets/GJ_GameSheet02/*.png" ]
+		}
+	},
+	"dependencies": {
+		"user95401.sprite-frames-unity": ">=v1.0.0"
+	}
 }

@@ -156,7 +156,7 @@ class $modify(GameObjectDialogTriggerExt, GameObject) {
             object->firstSetup();
             object->customSetup();
 
-            object->initWithSpriteFrameName("edit_eEventLinkBtn_001.png");
+            object->initWithSpriteFrameName("dialog-trigger.png"_spr);
 			object->m_objectID = DIALOG_TRIGGER_ID;
 
             auto DialogTriggerDataNode = CCNode::create();
@@ -168,7 +168,7 @@ class $modify(GameObjectDialogTriggerExt, GameObject) {
     };
     static GameObject* objectFromVector(gd::vector<gd::string>& p0, gd::vector<void*>& p1, GJBaseGameLayer* p2, bool p3) {
 		auto object = GameObject::objectFromVector(p0, p1, p2, p3);
-        if (false) log::debug("p0 {}", p0);
+        if (!object) return object;
         if (object->m_objectID == DIALOG_TRIGGER_ID) {
             auto effectObj = typeinfo_cast<EffectGameObject*>(object);
 
