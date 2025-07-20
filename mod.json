@@ -28,6 +28,7 @@
 		}
 	},
 	"dependencies": {
-		"user95401.sprite-frames-unity": ">=v1.0.0"
+		"user95401.sprite-frames-unity": ">=v1.0.0",
+		"user95401.game-objects-factory": ">=v1.0.0"
 	}
 }
