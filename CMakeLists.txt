@@ -24,4 +24,4 @@ endif()
 
 add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 
-setup_geode_mod(${PROJECT_NAME} EXTERNALS user95401.sprite-frames-unity:>=1.0.0 user95401.game-objects-factory:>=1.0.0)
+setup_geode_mod(${PROJECT_NAME} EXTERNALS user95401.sprite-frames-unity:1.0.0 user95401.game-objects-factory:1.0.0)
